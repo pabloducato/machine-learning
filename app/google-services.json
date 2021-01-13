@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "630513748302",
+    "project_id": "machine-learning-5d6c8",
+    "storage_bucket": "machine-learning-5d6c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630513748302:android:d74a690e7c855931c8f61f",
+        "android_client_info": {
+          "package_name": "com.machinelearningapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630513748302-vdvnqgocn8fnkof0d3sndvkvaq1aol7c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMLJ691uQ6j2Chw--s8CpTuRPZJrEi84U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630513748302-vdvnqgocn8fnkof0d3sndvkvaq1aol7c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
