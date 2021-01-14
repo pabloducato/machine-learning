@@ -95,21 +95,21 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case -1:
                     if (resultCode == Activity.RESULT_OK) {
-                            File file = new File(mCurrentPhotoPath);
-                            Bitmap bitmap = MediaStore.Images.Media
-                                    .getBitmap(getApplicationContext().getContentResolver(), Uri.fromFile(file));
-                            imageView.setImageBitmap(bitmap);
-                            FirebaseVisionImage firebaseVisionImage = FirebaseVisionImage.fromBitmap(bitmap);
-                            FirebaseVision firebaseVision = FirebaseVision.getInstance();
-                            FirebaseVisionTextRecognizer firebaseVisionTextRecognizer = firebaseVision.getOnDeviceTextRecognizer();
-                            Task<FirebaseVisionText> task = firebaseVisionTextRecognizer.processImage(firebaseVisionImage);
+                        File file = new File(mCurrentPhotoPath);
+                        Bitmap bitmap = MediaStore.Images.Media
+                                .getBitmap(getApplicationContext().getContentResolver(), Uri.fromFile(file));
+                        imageView.setImageBitmap(bitmap);
+                        FirebaseVisionImage firebaseVisionImage = FirebaseVisionImage.fromBitmap(bitmap);
+                        FirebaseVision firebaseVision = FirebaseVision.getInstance();
+                        FirebaseVisionTextRecognizer firebaseVisionTextRecognizer = firebaseVision.getOnDeviceTextRecognizer();
+                        Task<FirebaseVisionText> task = firebaseVisionTextRecognizer.processImage(firebaseVisionImage);
 
-                            task.addOnSuccessListener(firebaseVisionText -> {
-                                String s = firebaseVisionText.getText();
-                                textView.setText(s);
-                            });
+                        task.addOnSuccessListener(firebaseVisionText -> {
+                            String s = firebaseVisionText.getText();
+                            textView.setText(s);
+                        });
 
-                            task.addOnFailureListener(e -> Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show());
+                        task.addOnFailureListener(e -> Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show());
                     }
                     return;
                 default:
