@@ -19,7 +19,19 @@
                 android:name="com.google.firebase.ml.vision.DEPENDENCIES"
                 android:value="ocr" />
         </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.machinelearningapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.CAMERA" />
 
